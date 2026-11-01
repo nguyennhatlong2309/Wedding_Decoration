@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-script: 'Great Vibes', cursive;
+    --font-brush: 'Alex Brush', cursive;
+  }
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-brush {
+  font-family: 'Alex Brush', cursive;
+}
+
+/* Custom animations & utilities */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 4s ease-in-out infinite;
+}
+
+/* Glassmorphism card inner glow */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5DFD7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C7BDB1;
+}
