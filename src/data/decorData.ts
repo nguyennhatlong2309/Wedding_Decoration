@@ -76,7 +76,7 @@ export const TONES: ToneItem[] = [
     accentBg: 'bg-gradient-to-r from-rose-900 to-red-800',
     flowerTypes: ['Lan Hồ Điệp đỏ thắm', 'Hoa Mẫu Đơn Chu Sa', 'Hồng Ecuador nhung', 'Hoa Sen tuyết'],
     suitableFor: ['Mâm tráp Rồng Phượng cao cấp', 'Lễ Dạm Ngõ & Ăn Hỏi truyền thống', 'Lễ Gia Tiên Vu Quy - Tân Hôn', 'Tiệc cưới phong cách Cung Đình'],
-    previewImage: '/images/mam_trap_red.jpg',
+    previewImage: '/images/gia_tien_studio/giatien_royal_red.jpg',
     highlightText: 'Được 85% gia đình lựa chọn cho nghi thức Lễ Ăn Hỏi và Rước Dâu chuẩn phong tục Việt.'
   },
   {
@@ -99,7 +99,7 @@ export const TONES: ToneItem[] = [
     accentBg: 'bg-gradient-to-r from-pink-600 to-rose-500',
     flowerTypes: ['Hồng O’Hara trắng hồng', 'Hoa Mao Lương (Ranunculus)', 'Cẩm Tú Cầu nhập Hà Lan', 'Hoa Baby sấy hồng phấn'],
     suitableFor: ['Trang trí Gia Tiên phong cách Hàn Quốc', 'Tiệc cưới tư gia thanh lịch', 'Backdrop chụp ảnh cưới lãng mạn', 'Thôi nôi & đầy tháng bé gái'],
-    previewImage: '/images/gia_tien_pink.jpg',
+    previewImage: '/images/gia_tien_studio/giatien_blush_pink.jpg',
     highlightText: 'Sự lựa chọn yêu thích của các cặp đôi trẻ chuộng phong cách Hàn Quốc đương đại.'
   },
   {
@@ -122,7 +122,7 @@ export const TONES: ToneItem[] = [
     accentBg: 'bg-gradient-to-r from-emerald-800 to-teal-700',
     flowerTypes: ['Lan Hồ Điệp trắng muốt', 'Lá Bạch Đàn Dollar tròn', 'Hoa Hồng trắng Juliet', 'Lá Măng tây & Cúc Tana'],
     suitableFor: ['Tiệc cưới ngoài trời / Garden Wedding', 'Tiệc cưới Glasshouse (Nhà kính)', 'Bàn tiệc Gallery tối giản hiện đại', 'Tráp dạm ngõ hộp mica trong suốt'],
-    previewImage: '/images/tiec_cuoi_sage.jpg',
+    previewImage: '/images/gia_tien_studio/giatien_sage_emerald.jpg',
     highlightText: 'Xu hướng tiệc cưới bền vững, sang trọng mà không phô trương.'
   },
   {
@@ -145,7 +145,7 @@ export const TONES: ToneItem[] = [
     accentBg: 'bg-gradient-to-r from-amber-700 to-yellow-600',
     flowerTypes: ['Hoa Tulip vàng kem Pháp', 'Lan Vũ Nữ hoàng kim', 'Hoa Hồng sa mạc Cappuccino', 'Lá kim ngân phủ nhũ vàng'],
     suitableFor: ['Đại tiệc Trung tâm hội nghị tiệc cưới 5 sao', 'Sân khấu lễ đường quy mô lớn', 'Gia tiên biệt thự cổ điển sang trọng', 'Bộ mâm tráp dát vàng thủ công'],
-    previewImage: '/images/hero.jpg',
+    previewImage: '/images/hero_light.jpg',
     highlightText: 'Tạo dấu ấn đẳng cấp đỉnh cao cho những hôn lễ quy mô lớn.'
   },
   {
@@ -168,7 +168,7 @@ export const TONES: ToneItem[] = [
     accentBg: 'bg-gradient-to-r from-sky-600 to-teal-500',
     flowerTypes: ['Hoa Baby trắng phun màu pastel', 'Cẩm chướng mini phớt hồng', 'Cúc Ping Pong tạo hình gấu', 'Bóng bay Chrome nghệ thuật'],
     suitableFor: ['Tiệc Thôi Nôi 1 tuổi cho bé trai / bé gái', 'Lễ Đầy Tháng & Cúng Mụ 12 Bà Mụ', 'Backdrop 3D khinh khí cầu & gấu bông', 'Bàn Gallery bánh kem nghệ thuật'],
-    previewImage: '/images/thoi_noi_baby.jpg',
+    previewImage: '/images/gia_tien_studio/giatien_baby_blue.jpg',
     highlightText: 'Thiết kế độc bản theo tên và tính cách của từng thiên thần nhỏ.'
   }
 ];
@@ -271,7 +271,7 @@ export const PRODUCTS: ProductItem[] = [
     priceNumber: 7500000,
     toneId: 'tone-pink',
     toneLabel: 'Tone Hồng Pastel & Peach Romance',
-    image: '/images/gia_tien_pink.jpg',
+    image: '/images/gia_tien_studio/giatien_blush_pink.jpg',
     badge: 'Yêu Thích Nhất',
     isPopular: true,
     summary: 'Không gian gia tiên lễ vu quy lãng mạn, ngọt ngào với phông lụa, chữ Hỷ dát vàng và hoa tươi ngoại nhập ngập tràn hương sắc.',
@@ -301,7 +301,7 @@ export const PRODUCTS: ProductItem[] = [
     priceNumber: 8500000,
     toneId: 'tone-red',
     toneLabel: 'Tone Đỏ Chu Sa Hoàng Kim',
-    image: '/images/mam_trap_red.jpg',
+    image: '/images/gia_tien_studio/giatien_royal_red.jpg',
     summary: 'Đậm chất lễ nghi cổ truyền Việt Nam với chữ Song Hỷ cách điệu, lụa đỏ chu sa, hoa sen đỏ kết hợp lan hồ điệp trang trọng.',
     features: [
       'Tông màu đỏ chu sa quyền quý, lưu giữ trọn vẹn gia phong',
@@ -320,27 +320,29 @@ export const PRODUCTS: ProductItem[] = [
   },
   {
     id: 'decor-03',
-    title: 'Trang Trí Sân Khấu Tiệc Cưới & Lễ Đường White & Sage',
+    title: 'Trang Trí Gia Tiên & Lễ Vu Quy Sage Green & Emerald',
     category: 'gia-tien-tiec-cuoi',
     categoryLabel: 'Gia Tiên & Tiệc Cưới',
-    priceFrom: 'Từ 15.000.000đ',
-    priceNumber: 15000000,
+    priceFrom: 'Từ 8.900.000đ',
+    priceNumber: 8900000,
     toneId: 'tone-sage',
     toneLabel: 'Tone Trắng Tinh Khôi & Xanh Sage',
-    image: '/images/tiec_cuoi_sage.jpg',
-    summary: 'Không gian tiệc cưới phong cách Châu Âu hiện đại với mái vòm hoa trắng, lá bạch đàn hương thơm dịu mát và nến pha lê lấp lánh.',
+    image: '/images/gia_tien_studio/giatien_sage_emerald.jpg',
+    badge: 'Xu Hướng Mới',
+    summary: 'Phong cách gia tiên đương đại với phông nhung xanh ngọc bích, rèm voan xanh cốm, chữ Song Hỷ dát vàng và dàn trụ hoa lan hồ điệp kiêu sa.',
     features: [
-      'Backdrop sân khấu 3D uốn lượn nghệ thuật cao 3m x rộng 5m',
-      'Lối đi lên lễ đường phủ hoa trắng và hàng nến trụ thủy tinh',
-      'Bàn Gallery đón khách phong cách Minimalist Chic',
-      'Hiệu ứng ánh sáng fairy light và đèn rọi ấm cúng'
+      'Phông nền nhung xanh emerald phối lụa voan xanh cốm sang trọng',
+      'Trụ hoa lan hồ điệp trắng và hoa hồng pastel đối xứng',
+      'Bàn hai họ khăn trắng phủ runner xanh sage thanh thoát',
+      'Bộ ghế Chiavari vàng kim thắt nơ voan bồng bềnh'
     ],
     includes: [
-      'Backdrop chụp hình check-in sảnh tiệc kích thước lớn',
-      'Sân khấu chính với vòm hoa tươi & logo kim loại tên CD-CR',
-      'Lối đi sân khấu dài 10m kèm 8 trụ hoa tươi đan xen nến',
-      'Bàn Gallery hoa tươi, khung ảnh cưới, hộp tiền mừng',
-      'Hệ thống đèn follow và đèn led chiếu sáng sân khấu'
+      'Phông nền Gia Tiên nhung ngọc bích & lụa voan xanh cốm',
+      'Bàn thờ hương án đầy đủ đỉnh đồng và chân nến mạ vàng',
+      '2 trụ hoa lan hồ điệp và hoa mẫu đơn lớn hai bên',
+      'Bàn dài hai họ 12 ghế Chiavari cao cấp',
+      'Bộ ấm chén sứ trắng viền vàng + 12 chai nước in tên CD-CR',
+      'Bảng Welcome thiết kế riêng tone xanh sage'
     ]
   },
   {

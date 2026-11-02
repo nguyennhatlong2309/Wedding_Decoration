@@ -102,18 +102,18 @@ export const AudioPlayerWidget: React.FC = () => {
   }, []);
 
   return (
-    <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-stone-900/90 text-white shadow-md border border-stone-700/60 backdrop-blur-md">
+    <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-2.5 py-1 rounded-full bg-stone-900/90 text-white shadow-xs border border-stone-700/60 backdrop-blur-md">
       {/* Play/Pause Button */}
       <button
         onClick={togglePlay}
-        className="w-7 h-7 rounded-full bg-rose-900 hover:bg-rose-800 text-amber-300 flex items-center justify-center transition-transform active:scale-90 cursor-pointer shadow-sm"
+        className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-rose-900 hover:bg-rose-800 text-amber-300 flex items-center justify-center transition-transform active:scale-90 cursor-pointer shadow-xs shrink-0"
         title={isPlaying ? 'Tạm dừng nhạc lễ cưới' : 'Phát nhạc hòa tấu lễ cưới'}
       >
-        {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 ml-0.5" />}
+        {isPlaying ? <Pause className="w-2.5 h-2.5 sm:w-3 sm:h-3" /> : <Play className="w-2.5 h-2.5 sm:w-3 sm:h-3 ml-0.5" />}
       </button>
 
       {/* Soundwave animation */}
-      <div className="flex items-end gap-0.5 h-3.5 px-1">
+      <div className="flex items-end gap-0.5 h-2.5 sm:h-3 px-0.5">
         {[0.4, 0.9, 0.6, 1, 0.5, 0.8].map((scale, i) => (
           <span
             key={i}
@@ -121,7 +121,7 @@ export const AudioPlayerWidget: React.FC = () => {
               isPlaying ? 'animate-pulse' : 'h-1 opacity-40'
             }`}
             style={{
-              height: isPlaying ? `${Math.max(4, scale * 14)}px` : '4px',
+              height: isPlaying ? `${Math.max(3, scale * 12)}px` : '3px',
               animationDelay: `${i * 120}ms`,
             }}
           />
@@ -129,11 +129,11 @@ export const AudioPlayerWidget: React.FC = () => {
       </div>
 
       {/* Track Label */}
-      <div className="hidden sm:flex flex-col text-left pr-1">
-        <span className="text-[10px] font-bold text-amber-300 flex items-center gap-1 leading-none">
-          <Sparkles className="w-2.5 h-2.5" /> Canon in D
+      <div className="hidden md:flex flex-col text-left pr-0.5">
+        <span className="text-[9px] font-bold text-amber-300 flex items-center gap-1 leading-none">
+          <Sparkles className="w-2 h-2" /> Canon in D
         </span>
-        <span className="text-[9px] text-stone-400 leading-tight">
+        <span className="text-[8px] text-stone-400 leading-tight">
           Hòa tấu lễ cưới
         </span>
       </div>
@@ -141,15 +141,15 @@ export const AudioPlayerWidget: React.FC = () => {
       {/* Mute Button */}
       <button
         onClick={toggleMute}
-        className="p-1 text-stone-400 hover:text-white transition-colors cursor-pointer"
+        className="p-0.5 text-stone-400 hover:text-white transition-colors cursor-pointer shrink-0"
         title={isMuted ? 'Bật âm thanh' : 'Tắt tiếng'}
       >
-        {isMuted ? <VolumeX className="w-3.5 h-3.5 text-rose-400" /> : <Volume2 className="w-3.5 h-3.5" />}
+        {isMuted ? <VolumeX className="w-3 h-3 text-rose-400" /> : <Volume2 className="w-3 h-3" />}
       </button>
 
       {/* Mini Progress hairline */}
       {isPlaying && (
-        <div className="hidden md:block w-12 h-1 bg-stone-700 rounded-full overflow-hidden">
+        <div className="hidden lg:block w-10 h-1 bg-stone-700/80 rounded-full overflow-hidden">
           <div
             className="h-full bg-gradient-to-r from-amber-400 to-rose-400 transition-all duration-500"
             style={{ width: `${trackProgress}%` }}

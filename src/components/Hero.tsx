@@ -24,23 +24,23 @@ export const Hero: React.FC<HeroProps> = ({ onExploreTones, onOpenEstimator, onS
     {
       id: 'slide-1',
       toneId: 'tone-gold',
-      image: '/images/hero.jpg',
-      tagline: 'NGHỆ THUẬT ĐẠI TIỆC 5 SAO',
+      image: '/images/hero_light.jpg',
+      tagline: 'NGHỆ THUẬT LỄ ĐƯỜNG NẮNG MAI & HOÀNG GIA',
       serifTitle: 'Nâng Niu Ngày Trọng Đại',
-      artisticScript: 'Hào Hoa & Tráng Lệ',
-      description: 'Không gian tiệc cưới hoàng gia với dàn đèn chùm pha lê, dải lụa chiffon rủ bóng và ánh nến lung linh.',
-      toneLabel: 'Tone Champagne Gold',
+      artisticScript: 'Hào Hoa & Tinh Khôi',
+      description: 'Không gian lễ đường ngập tràn ánh nắng ban mai, vòm hoa hồng mẫu đơn trắng muốt và vương vấn hương thơm hạnh phúc.',
+      toneLabel: 'Tone Sáng Cung Điện',
       accentColor: '#C89D4B',
     },
     {
       id: 'slide-2',
       toneId: 'tone-red',
-      image: '/images/mam_trap_red.jpg',
+      image: '/images/trap_showcase/grand_sets/grand_ceremony_set_red.jpg',
       tagline: 'MÂM TRÁP RỒNG PHƯỢNG SƠN MÀI',
       serifTitle: 'Gìn Giữ Nếp Nhà Xưa',
       artisticScript: 'Son Sắt Thủy Chung',
       description: 'Mâm tráp Rồng Phượng chạm trổ tỉ mỉ từ cau tươi Đắk Lắk, khay sơn mài đỏ chu sa dát vàng 24k vương giả.',
-      toneLabel: 'Tone Đỏ Chu Sa Hoàng Kim',
+      toneLabel: 'Tone Đỏ Chu Sa',
       accentColor: '#9E1B32',
     },
     {
@@ -51,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreTones, onOpenEstimator, onS
       serifTitle: 'Thanh Thuần Khởi Đầu',
       artisticScript: 'Giấc Mơ Cổ Tích',
       description: 'Gian thờ gia tiên ấm cúng, hoa hồng Ohara nhập khẩu đan xen chữ Song Hỷ mạ vàng trong nắng mai.',
-      toneLabel: 'Tone Hồng Pastel Romance',
+      toneLabel: 'Tone Hồng Pastel',
       accentColor: '#E58B9C',
     },
     {
@@ -73,14 +73,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreTones, onOpenEstimator, onS
       serifTitle: 'Chào Đón Thiên Thần Nhỏ',
       artisticScript: 'Bầu Trời Tuổi Thơ',
       description: 'Backdrop 3D khinh khí cầu bồng bềnh, mây pastel và mâm cúng 12 Bà Mụ chuẩn phong tục cầu bình an.',
-      toneLabel: 'Tone Baby Cloud Pastel',
+      toneLabel: 'Tone Baby Pastel',
       accentColor: '#6299C9',
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-advance slides every 6 seconds
+  // Auto-advance slides every 6.5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
@@ -108,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreTones, onOpenEstimator, onS
   const currentSlide = slides[currentIndex];
 
   return (
-    <section className="relative w-full min-h-[100dvh] flex items-center justify-center overflow-hidden bg-stone-950 text-white">
+    <section className="relative w-full min-h-[100dvh] flex items-center justify-center overflow-hidden bg-[#FAF7F2] text-stone-900">
       
       {/* Full-Screen Background Image Layers with Smooth Transitions */}
       {slides.map((slide, idx) => (
@@ -125,71 +125,71 @@ export const Hero: React.FC<HeroProps> = ({ onExploreTones, onOpenEstimator, onS
               idx === currentIndex ? 'scale-105' : 'scale-100'
             }`}
           />
-          {/* Layered Vignette & Dark Scrim for Artistic Contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/45 to-stone-950/60" />
-          <div className="absolute inset-0 bg-radial-at-c from-transparent via-stone-950/30 to-stone-950/80" />
+          {/* Tone Sáng: Light and airy luminous veil instead of dark heavy scrim */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2] via-transparent to-white/40 pointer-events-none" />
+          <div className="absolute inset-0 bg-radial-at-c from-transparent via-white/10 to-black/20 pointer-events-none" />
         </div>
       ))}
 
       {/* Main Full-Screen Artistic Content Overlay */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 pb-32 flex flex-col items-center justify-center min-h-[100dvh]">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-28 flex flex-col items-center justify-center min-h-[100dvh]">
         
         {/* Eyebrow Pill */}
-        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-amber-300 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] mb-6 shadow-xl animate-fade-in">
-          <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 hover:bg-white/95 backdrop-blur-md border border-stone-200/90 text-rose-950 text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] mb-5 shadow-sm animate-fade-in">
+          <Sparkles className="w-3.5 h-3.5 text-amber-500" />
           <span>{currentSlide.tagline}</span>
         </div>
 
         {/* Grand Typography: Serif Heading */}
-        <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-tight drop-shadow-md">
+        <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-stone-900 leading-tight drop-shadow-[0_2px_12px_rgba(255,255,255,0.8)]">
           {currentSlide.serifTitle}
         </h1>
 
         {/* Artistic Calligraphy Script Overlay */}
-        <div className="font-script text-5xl sm:text-7xl lg:text-8xl text-amber-300 drop-shadow-[0_4px_20px_rgba(197,160,89,0.35)] -mt-2 sm:-mt-4 mb-4 select-none tracking-wide">
+        <div className="font-script text-5xl sm:text-7xl lg:text-8xl text-rose-900 drop-shadow-[0_2px_18px_rgba(255,255,255,0.9)] -mt-2 sm:-mt-4 mb-4 select-none tracking-wide font-normal">
           {currentSlide.artisticScript}
         </div>
 
-        {/* Poetic Description */}
-        <p className="text-sm sm:text-lg text-stone-200 max-w-2xl mx-auto font-light leading-relaxed mb-8 drop-shadow-sm px-4">
+        {/* Poetic Description with soft translucent backdrop for ultimate legibility */}
+        <p className="text-sm sm:text-lg text-stone-800 max-w-2xl mx-auto font-normal leading-relaxed mb-8 drop-shadow-xs px-5 py-1.5 bg-white/40 backdrop-blur-xs rounded-full">
           {currentSlide.description}
         </p>
 
         {/* Action CTAs */}
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-2 mb-8">
+        <div className="flex flex-wrap items-center justify-center gap-3.5 pt-1 mb-8">
           <button
             onClick={onExploreTones}
-            className="group inline-flex items-center gap-3 px-7 sm:px-8 py-4 rounded-full bg-stone-900 text-white font-medium text-sm sm:text-base border border-amber-300/40 shadow-[0_10px_35px_rgba(0,0,0,0.4)] hover:bg-stone-800 active:scale-95 transition-all cursor-pointer backdrop-blur-md"
+            className="group inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 rounded-full bg-stone-900 text-white font-medium text-xs sm:text-sm hover:bg-stone-800 active:scale-95 transition-all cursor-pointer shadow-lg hover:shadow-xl"
           >
             <span>Khám Phá 5 Tone Màu</span>
-            <div className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+            <div className="w-6 h-6 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-1 transition-transform">
               <ArrowRight className="w-3.5 h-3.5 text-amber-300" />
             </div>
           </button>
 
           <button
             onClick={onOpenEstimator}
-            className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-4 rounded-full bg-white/15 hover:bg-white/25 text-white font-medium text-sm sm:text-base backdrop-blur-md border border-white/20 transition-all shadow-md active:scale-95 cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 rounded-full bg-white/85 hover:bg-white text-stone-800 font-semibold text-xs sm:text-sm backdrop-blur-md border border-stone-300 transition-all shadow-md active:scale-95 cursor-pointer"
           >
-            <Palette className="w-4 h-4 text-amber-300" />
+            <Palette className="w-4 h-4 text-rose-800" />
             <span>Ước Tính Chi Phí Trọn Gói</span>
           </button>
         </div>
 
-        {/* Floating Slide Navigation Bar (Full Screen Tone Selector) */}
-        <div className="flex items-center gap-2 sm:gap-3 p-1.5 sm:p-2 rounded-full bg-black/40 backdrop-blur-lg border border-white/15 shadow-2xl">
+        {/* Floating Slide Navigation Bar (Tone Sáng Light Glass Pill) */}
+        <div className="flex items-center gap-2 sm:gap-2.5 p-1.5 rounded-full bg-white/80 hover:bg-white/95 backdrop-blur-md border border-stone-200/90 shadow-lg">
           {slides.map((slide, idx) => (
             <button
               key={slide.id}
               onClick={() => handleSlideChange(idx)}
               className={`flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full text-xs transition-all duration-300 cursor-pointer ${
                 idx === currentIndex
-                  ? 'bg-white text-stone-900 font-bold shadow-lg scale-105'
-                  : 'text-stone-300 hover:text-white hover:bg-white/10'
+                  ? 'bg-stone-900 text-white font-bold shadow-md scale-105'
+                  : 'text-stone-600 hover:text-stone-900 hover:bg-stone-100/60'
               }`}
             >
               <span
-                className="w-2.5 h-2.5 rounded-full shrink-0"
+                className="w-2.5 h-2.5 rounded-full shrink-0 ring-1 ring-stone-200"
                 style={{ backgroundColor: slide.accentColor }}
               />
               <span className="hidden md:inline">{slide.toneLabel}</span>
@@ -203,30 +203,30 @@ export const Hero: React.FC<HeroProps> = ({ onExploreTones, onOpenEstimator, onS
       {/* Left / Right Arrow Controls */}
       <button
         onClick={handlePrev}
-        className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/30 hover:bg-black/60 text-white border border-white/20 items-center justify-center backdrop-blur-md transition-all active:scale-90 cursor-pointer shadow-xl"
+        className="hidden md:flex absolute left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/70 hover:bg-white text-stone-800 border border-stone-200 items-center justify-center backdrop-blur-md transition-all active:scale-90 cursor-pointer shadow-md"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-5 h-5" />
       </button>
 
       <button
         onClick={handleNext}
-        className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/30 hover:bg-black/60 text-white border border-white/20 items-center justify-center backdrop-blur-md transition-all active:scale-90 cursor-pointer shadow-xl"
+        className="hidden md:flex absolute right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/70 hover:bg-white text-stone-800 border border-stone-200 items-center justify-center backdrop-blur-md transition-all active:scale-90 cursor-pointer shadow-md"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-5 h-5" />
       </button>
 
       {/* Bottom Scroll-Down Hint with Animated Mouse */}
       <div
         onClick={onExploreTones}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-stone-400 hover:text-white cursor-pointer transition-colors"
+        className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-stone-500 hover:text-stone-900 cursor-pointer transition-colors"
       >
-        <span className="text-[10px] uppercase font-bold tracking-[0.25em]">
+        <span className="text-[9px] uppercase font-bold tracking-[0.25em]">
           Cuộn Để Khám Phá
         </span>
-        <div className="w-5 h-8 rounded-full border-2 border-stone-400 flex items-start justify-center p-1">
-          <div className="w-1 h-2 bg-amber-300 rounded-full animate-bounce" />
+        <div className="w-4 h-7 rounded-full border-2 border-stone-400/80 flex items-start justify-center p-0.5">
+          <div className="w-1 h-1.5 bg-rose-800 rounded-full animate-bounce" />
         </div>
       </div>
 

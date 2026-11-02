@@ -32,31 +32,31 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onNavigate }) => 
 
   return (
     <>
-      <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-300">
-        <nav className="glass-panel rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between shadow-[0_8px_32px_rgba(0,0,0,0.06)] border border-stone-200/80">
+      <header className="fixed top-2 sm:top-2.5 left-1/2 -translate-x-1/2 w-auto max-w-[96%] z-50 transition-all duration-300">
+        <nav className="glass-panel rounded-full px-2.5 sm:px-4 py-1 flex items-center justify-between gap-2 sm:gap-3.5 lg:gap-5 shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-stone-200/70 bg-white/75 hover:bg-white/90 backdrop-blur-md">
           
-          {/* Brand Logo with XTRA elegance */}
-          <a href="#" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-stone-900 text-amber-300 flex items-center justify-center font-serif text-lg font-bold shadow-md group-hover:scale-105 transition-transform border border-amber-300/30">
+          {/* Brand Logo with compact elegance */}
+          <a href="#" className="flex items-center gap-1.5 group shrink-0">
+            <div className="w-6 h-6 rounded-full bg-stone-900 text-amber-300 flex items-center justify-center font-serif text-xs font-bold shadow-xs group-hover:scale-105 transition-transform border border-amber-300/30">
               M
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-stone-900 leading-none">
+              <span className="font-serif text-xs sm:text-[13px] font-bold tracking-tight text-stone-900 leading-tight">
                 MÂY DECOR
               </span>
-              <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-stone-500 font-medium mt-0.5">
+              <span className="text-[7.5px] uppercase tracking-wider text-stone-400 font-medium leading-none">
                 Wedding & Milestone
               </span>
             </div>
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium text-stone-600">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-5 text-[11px] sm:text-xs font-medium text-stone-600">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="hover:text-rose-900 hover:font-semibold transition-colors cursor-pointer"
+                className="hover:text-rose-900 hover:font-semibold transition-colors cursor-pointer whitespace-nowrap py-0.5"
               >
                 {link.label}
               </button>
@@ -64,7 +64,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onNavigate }) => 
           </div>
 
           {/* Right Action Cluster: Romantic Audio Player + Call + Book */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             
             {/* Romantic Ambient Wedding Music Player */}
             <div className="hidden md:block">
@@ -74,20 +74,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onNavigate }) => 
             {/* Hotline Phone Pill */}
             <a
               href="tel:0988123456"
-              className="hidden xl:inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-full border border-stone-300 hover:border-stone-400 text-stone-700 hover:text-stone-900 bg-white/60 transition-all"
+              className="hidden xl:inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-1 rounded-full border border-stone-200 hover:border-stone-400 text-stone-700 hover:text-stone-900 bg-white/70 transition-all"
             >
-              <Phone className="w-3.5 h-3.5 text-rose-800" />
+              <Phone className="w-2.5 h-2.5 text-rose-800" />
               <span>0988.123.456</span>
             </a>
 
-            {/* Main Booking CTA Button with XTRA Button-in-button design */}
+            {/* Main Booking CTA Button with compact pill design */}
             <button
               onClick={() => onOpenBooking()}
-              className="group relative inline-flex items-center gap-2 px-4 sm:px-5 py-2 rounded-full bg-stone-900 text-white text-xs sm:text-sm font-medium shadow-md hover:bg-stone-800 active:scale-95 transition-all cursor-pointer"
+              className="group relative inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full bg-stone-900 text-white text-[11px] font-semibold shadow-xs hover:bg-stone-800 active:scale-95 transition-all cursor-pointer whitespace-nowrap"
             >
-              <Sparkles className="w-3.5 h-3.5 text-amber-300 group-hover:rotate-12 transition-transform" />
-              <span>Tư Vấn Ngay</span>
-              <div className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-[10px] ml-0.5">
+              <Sparkles className="w-2.5 h-2.5 text-amber-300 group-hover:rotate-12 transition-transform" />
+              <span>Tư Vấn</span>
+              <div className="w-3.5 h-3.5 rounded-full bg-white/10 flex items-center justify-center text-[8px] ml-0.5">
                 ↗
               </div>
             </button>
@@ -95,10 +95,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onNavigate }) => 
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-stone-700 hover:text-stone-900 rounded-full hover:bg-stone-100 transition-colors"
+              className="lg:hidden p-1 text-stone-700 hover:text-stone-900 rounded-full hover:bg-stone-100 transition-colors"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-3.5 h-3.5" /> : <Menu className="w-3.5 h-3.5" />}
             </button>
           </div>
         </nav>
